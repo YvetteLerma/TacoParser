@@ -25,9 +25,11 @@
 
             // grab the latitude from your array at index 0
             var latitude = double.Parse(cells[0]);
+            //var lat = cell[0];
 
             // grab the longitude from your array at index 1
             var longitude = double.Parse(cells[1]);
+            //var lon = cells[1];
 
             // grab the name from your array at index 2
             var name = cells[2];
@@ -44,14 +46,19 @@
             point.Latitude = latitude;
             point.Longitude = longitude;
 
+            //var point = new Point() { Latitude = lat, Longitude = lon }; -- YOU CAN DO THIS
+
             var tacoBell = new TacoBell();
             tacoBell.Name = name;
             tacoBell.Location = point;
 
+            //var tacoBell = new TacoBell() {Name = name, Location = point}; -- YOU CAN DO THIS
+
+
             // Then, return the instance of your TacoBell class
             // Since it conforms to ITrackable
 
-            return null;
+            return tacoBell;
         }
     }
 }
